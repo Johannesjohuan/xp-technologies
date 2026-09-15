@@ -1,0 +1,1764 @@
+.fashion-erp-preview {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #dfe5ee;
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
+}
+
+.fashion-erp-preview *,
+.fashion-erp-preview *::before,
+.fashion-erp-preview *::after {
+  box-sizing: border-box;
+}
+
+.ferp-preview-controls {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+.ferp-preview-controls > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.ferp-preview-controls > div:first-child {
+  color: #667085;
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+.ferp-preview-controls button {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475467;
+  background: #ffffff;
+  border: 1px solid #e1e6ed;
+  border-radius: 6px;
+}
+
+.ferp-live-dot-main {
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: ferp-live-main 1.3s infinite;
+}
+
+@keyframes ferp-live-main {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.ferp-desktop-only {
+  display: block;
+}
+
+.ferp-mobile-only {
+  display: none;
+}
+
+.ferp-desktop-demo {
+  position: relative;
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  height: 465px;
+  overflow: hidden;
+  background: #f5f7fb;
+}
+
+.ferp-desktop-sidebar {
+  padding: 15px 9px;
+  color: #ffffff;
+  background: #0c1730;
+}
+
+.ferp-desktop-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  padding: 0 7px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ferp-desktop-brand > div {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #6366f1);
+  border-radius: 7px;
+  font-size: 0.7rem;
+}
+
+.ferp-desktop-brand strong {
+  font-size: 0.72rem;
+}
+
+.ferp-desktop-menu {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 3px;
+  padding: 0 9px;
+  color: #aeb9cb;
+  border-radius: 6px;
+  font-size: 0.61rem;
+  font-weight: 600;
+}
+
+.ferp-desktop-menu i {
+  width: 14px;
+}
+
+.ferp-desktop-menu.active {
+  color: #ffffff;
+  background: #2855d9;
+}
+
+.ferp-desktop-main {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.ferp-desktop-transition,
+.ferp-desktop-screen {
+  width: 100%;
+  height: 100%;
+}
+
+.ferp-desktop-transition {
+  animation: ferp-desktop-enter 0.35s ease;
+}
+
+@keyframes ferp-desktop-enter {
+  from {
+    opacity: 0.25;
+    transform: translateY(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ferp-desktop-screen {
+  overflow: hidden;
+  background: #f5f7fb;
+}
+
+.ferp-desktop-topbar {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 17px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8ebf0;
+}
+
+.ferp-desktop-topbar > strong {
+  color: #101828;
+  font-size: 0.74rem;
+}
+
+.ferp-desktop-topbar > div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #667085;
+}
+
+.ferp-desktop-search {
+  width: 120px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 9px;
+  color: #98a2b3;
+  background: #f8fafc;
+  border: 1px solid #eaecf0;
+  border-radius: 6px;
+  font-size: 0.57rem;
+}
+
+.ferp-desktop-avatar {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #2855d9;
+  border-radius: 50%;
+  font-size: 0.54rem;
+  font-weight: 800;
+}
+
+.ferp-desktop-content {
+  position: relative;
+  padding: 16px 17px;
+}
+
+.ferp-desktop-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+.ferp-desktop-welcome span {
+  color: #667085;
+  font-size: 0.57rem;
+}
+
+.ferp-desktop-welcome h3 {
+  margin: 2px 0 0;
+  color: #101828;
+  font-size: 0.85rem;
+}
+
+.ferp-desktop-welcome button,
+.ferp-desktop-payment-card button,
+.ferp-desktop-notification button {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 11px;
+  color: #ffffff;
+  background: #2855d9;
+  border: 0;
+  border-radius: 6px;
+  font-size: 0.55rem;
+  font-weight: 700;
+}
+
+.ferp-desktop-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ferp-desktop-stats > div {
+  padding: 11px;
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 8px;
+}
+
+.ferp-desktop-stats span {
+  display: block;
+  color: #667085;
+  font-size: 0.52rem;
+}
+
+.ferp-desktop-stats strong {
+  display: block;
+  margin-top: 5px;
+  color: #101828;
+  font-size: 0.92rem;
+}
+
+.ferp-desktop-stats small {
+  display: block;
+  margin-top: 5px;
+  color: #16a05d;
+  font-size: 0.46rem;
+}
+
+.ferp-desktop-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.65fr 0.75fr;
+  gap: 9px;
+  margin-top: 9px;
+}
+
+.ferp-desktop-panel {
+  padding: 11px;
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 8px;
+}
+
+.ferp-desktop-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.ferp-desktop-panel-heading strong {
+  color: #101828;
+  font-size: 0.61rem;
+}
+
+.ferp-desktop-panel-heading span {
+  color: #2563eb;
+  font-size: 0.48rem;
+}
+
+.ferp-desktop-order {
+  min-height: 47px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.6fr 0.75fr;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+  border-bottom: 1px solid #eef0f3;
+  color: #475467;
+  font-size: 0.49rem;
+}
+
+.ferp-desktop-order > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ferp-desktop-order > div strong,
+.ferp-desktop-order > strong {
+  color: #101828;
+  font-size: 0.51rem;
+}
+
+.ferp-desktop-order > div span {
+  color: #667085;
+  font-size: 0.45rem;
+}
+
+.ferp-desktop-order small {
+  justify-self: end;
+  padding: 3px 5px;
+  border-radius: 10px;
+  font-size: 0.42rem;
+}
+
+.ferp-new-row {
+  background: #f4f7ff;
+}
+
+.ferp-green-status {
+  color: #067647;
+  background: #ecfdf3;
+}
+
+.ferp-blue-status {
+  color: #175cd3;
+  background: #eff8ff;
+}
+
+.ferp-orange-status {
+  color: #b54708;
+  background: #fffaeb;
+}
+
+.ferp-purple-status {
+  color: #6941c6;
+  background: #f4f3ff;
+}
+
+.ferp-desktop-production > div:not(.ferp-desktop-panel-heading) {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eef0f3;
+  color: #667085;
+  font-size: 0.51rem;
+}
+
+.ferp-desktop-production strong {
+  color: #101828;
+}
+
+.ferp-desktop-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.ferp-desktop-title span {
+  color: #667085;
+  font-size: 0.5rem;
+}
+
+.ferp-desktop-title h3 {
+  margin: 2px 0 0;
+  color: #101828;
+  font-size: 0.86rem;
+}
+
+.ferp-desktop-title > small {
+  padding: 5px 8px;
+  color: #344054;
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 5px;
+  font-size: 0.48rem;
+}
+
+.ferp-desktop-form,
+.ferp-desktop-payment-card,
+.ferp-desktop-summary,
+.ferp-desktop-production-card {
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #e5e9ef;
+  border-radius: 8px;
+}
+
+.ferp-desktop-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.ferp-desktop-form label > span,
+.ferp-desktop-measurements label > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #344054;
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+.ferp-desktop-input,
+.ferp-desktop-measurements label > div {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: #101828;
+  background: #ffffff;
+  border: 1px solid #d7dce3;
+  border-radius: 5px;
+  font-size: 0.54rem;
+}
+
+.ferp-desktop-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #eef0f3;
+}
+
+.ferp-desktop-actions button {
+  min-height: 31px;
+  padding: 0 12px;
+  border-radius: 5px;
+  font-size: 0.52rem;
+  font-weight: 700;
+}
+
+.ferp-desktop-actions .primary {
+  color: #ffffff;
+  background: #2855d9;
+  border: 1px solid #2855d9;
+}
+
+.ferp-desktop-actions .secondary {
+  color: #344054;
+  background: #ffffff;
+  border: 1px solid #d7dce3;
+}
+
+.ferp-desktop-toast {
+  position: absolute;
+  right: 17px;
+  bottom: 15px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #dce9df;
+  border-radius: 7px;
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.15);
+}
+
+.ferp-desktop-toast > i {
+  color: #16a05d;
+}
+
+.ferp-desktop-toast > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ferp-desktop-toast strong {
+  color: #101828;
+  font-size: 0.52rem;
+}
+
+.ferp-desktop-toast span {
+  color: #667085;
+  font-size: 0.44rem;
+}
+
+.ferp-desktop-customer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.ferp-desktop-customer > div {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #5266d8;
+  border-radius: 50%;
+  font-size: 0.5rem;
+}
+
+.ferp-desktop-customer > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.ferp-desktop-customer strong {
+  color: #101828;
+  font-size: 0.54rem;
+}
+
+.ferp-desktop-customer small {
+  color: #667085;
+  font-size: 0.44rem;
+}
+
+.ferp-desktop-measurements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.ferp-desktop-money {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 13px;
+  padding: 11px;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.ferp-desktop-money > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ferp-desktop-money span {
+  color: #667085;
+  font-size: 0.46rem;
+}
+
+.ferp-desktop-money strong {
+  color: #101828;
+  font-size: 0.64rem;
+}
+
+.ferp-desktop-payment-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 13px;
+}
+
+.ferp-desktop-payment-card > span,
+.ferp-desktop-summary > span {
+  color: #2563eb;
+  font-size: 0.44rem;
+  font-weight: 800;
+}
+
+.ferp-desktop-payment-card h3 {
+  margin: 4px 0 13px;
+  color: #101828;
+  font-size: 0.8rem;
+}
+
+.ferp-desktop-payment-amount {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.ferp-desktop-payment-amount span {
+  color: #667085;
+  font-size: 0.5rem;
+}
+
+.ferp-desktop-payment-amount strong {
+  color: #101828;
+  font-size: 0.84rem;
+}
+
+.ferp-desktop-payment-method {
+  margin: 12px 0;
+}
+
+.ferp-desktop-payment-method > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #344054;
+  font-size: 0.48rem;
+}
+
+.ferp-desktop-payment-method > div {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 9px;
+  border: 1px solid #d7dce3;
+  border-radius: 5px;
+  color: #344054;
+  font-size: 0.5rem;
+}
+
+.ferp-desktop-payment-card button {
+  width: 100%;
+}
+
+.ferp-desktop-summary > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0;
+  border-bottom: 1px solid #eef0f3;
+  color: #667085;
+  font-size: 0.5rem;
+}
+
+.ferp-desktop-summary strong {
+  color: #101828;
+}
+
+.ferp-desktop-receipt-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px;
+}
+
+.ferp-desktop-receipt {
+  width: 300px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+}
+
+.ferp-receipt-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 9px;
+  border-bottom: 1px dashed #d0d5dd;
+}
+
+.ferp-receipt-logo strong {
+  color: #101828;
+  font-size: 0.6rem;
+}
+
+.ferp-desktop-receipt > span {
+  display: block;
+  margin: 8px 0;
+  color: #667085;
+  font-size: 0.43rem;
+  font-weight: 800;
+}
+
+.ferp-desktop-receipt > div:not(.ferp-receipt-logo) {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  color: #667085;
+  font-size: 0.48rem;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.ferp-desktop-receipt strong {
+  color: #101828;
+}
+
+.ferp-desktop-receipt > small {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 7px;
+  color: #067647;
+  background: #ecfdf3;
+  border-radius: 5px;
+  font-size: 0.43rem;
+}
+
+.ferp-desktop-receipt-buttons {
+  display: flex;
+  gap: 6px;
+  margin-top: 9px;
+}
+
+.ferp-desktop-receipt-buttons button {
+  min-height: 27px;
+  padding: 0 9px;
+  color: #344054;
+  background: #ffffff;
+  border: 1px solid #d7dce3;
+  border-radius: 5px;
+  font-size: 0.45rem;
+}
+
+.ferp-desktop-production-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #e5e9ef;
+  border-radius: 7px;
+}
+
+.ferp-desktop-production-order span {
+  color: #2563eb;
+  font-size: 0.43rem;
+}
+
+.ferp-desktop-production-order h3 {
+  margin: 2px 0;
+  color: #101828;
+  font-size: 0.68rem;
+}
+
+.ferp-desktop-production-order p {
+  margin: 0;
+  color: #667085;
+  font-size: 0.45rem;
+}
+
+.ferp-desktop-production-order small {
+  color: #175cd3;
+  background: #eff8ff;
+  padding: 5px 7px;
+  border-radius: 10px;
+  font-size: 0.42rem;
+}
+
+.ferp-desktop-production-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ferp-desktop-production-title span {
+  color: #667085;
+  font-size: 0.43rem;
+}
+
+.ferp-desktop-production-title h3 {
+  margin: 2px 0;
+  color: #101828;
+  font-size: 0.68rem;
+}
+
+.ferp-desktop-production-title > strong {
+  color: #2563eb;
+  font-size: 0.7rem;
+}
+
+.ferp-desktop-progress {
+  height: 5px;
+  margin: 8px 0 15px;
+  overflow: hidden;
+  background: #edf0f4;
+  border-radius: 20px;
+}
+
+.ferp-desktop-progress > div {
+  height: 100%;
+  background: #2855d9;
+  transition: width 0.6s ease;
+}
+
+.ferp-desktop-production-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.ferp-desktop-production-box {
+  padding: 9px 4px;
+  text-align: center;
+  background: #fafbfc;
+  border: 1px solid #e9edf2;
+  border-radius: 6px;
+}
+
+.ferp-desktop-production-box > div {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e4e7ec;
+  border-radius: 50%;
+  font-size: 0.55rem;
+}
+
+.ferp-desktop-production-box strong {
+  display: block;
+  color: #344054;
+  font-size: 0.44rem;
+}
+
+.ferp-desktop-production-box span {
+  display: block;
+  margin-top: 2px;
+  color: #98a2b3;
+  font-size: 0.38rem;
+}
+
+.ferp-desktop-production-box.done {
+  background: #f0fdf4;
+  border-color: #ccebd8;
+}
+
+.ferp-desktop-production-box.done > div {
+  color: #067647;
+}
+
+.ferp-desktop-production-box.active {
+  background: #eff6ff;
+  border-color: #b9d2ff;
+}
+
+.ferp-desktop-production-box.active > div {
+  color: #2563eb;
+}
+
+.ferp-desktop-complete {
+  margin-top: 12px;
+  padding: 9px;
+  color: #067647;
+  background: #ecfdf3;
+  border-radius: 6px;
+  font-size: 0.48rem;
+}
+
+.ferp-desktop-notification-area {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.ferp-desktop-notification {
+  width: 340px;
+  padding: 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e9ef;
+  border-radius: 9px;
+}
+
+.ferp-desktop-notification > div:first-child {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  background: #eef4ff;
+  border-radius: 50%;
+}
+
+.ferp-desktop-notification > span {
+  color: #2563eb;
+  font-size: 0.42rem;
+  font-weight: 800;
+}
+
+.ferp-desktop-notification h3 {
+  margin: 4px 0;
+  color: #101828;
+  font-size: 0.75rem;
+}
+
+.ferp-desktop-notification > p {
+  color: #667085;
+  font-size: 0.46rem;
+}
+
+.ferp-desktop-message {
+  padding: 10px;
+  text-align: left;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.ferp-desktop-message strong {
+  color: #101828;
+  font-size: 0.49rem;
+}
+
+.ferp-desktop-message p {
+  margin: 3px 0 0;
+  color: #667085;
+  font-size: 0.42rem;
+}
+
+.ferp-desktop-notification button {
+  width: 100%;
+  margin-top: 10px;
+  background: #16a05d;
+}
+
+.ferp-desktop-cursor {
+  position: absolute;
+  z-index: 50;
+  color: #111827;
+  pointer-events: none;
+  transition:
+    top 0.7s ease,
+    left 0.7s ease,
+    transform 0.2s ease;
+}
+
+.ferp-desktop-cursor i {
+  display: block;
+  transform: rotate(-20deg);
+  font-size: 1.05rem;
+}
+
+.cursor-dashboard,
+.cursor-final-dashboard {
+  top: 80px;
+  left: 70px;
+}
+
+.cursor-customer,
+.cursor-customer-saved {
+  top: 128px;
+  left: 75px;
+}
+
+.cursor-measurements,
+.cursor-measurements-saved {
+  top: 161px;
+  left: 75px;
+}
+
+.cursor-order,
+.cursor-order-created {
+  top: 195px;
+  left: 75px;
+}
+
+.cursor-payment {
+  top: 335px;
+  left: 360px;
+}
+
+.cursor-receipt {
+  top: 385px;
+  left: 420px;
+}
+
+.cursor-production {
+  top: 230px;
+  left: 75px;
+}
+
+.cursor-cutting,
+.cursor-sewing,
+.cursor-fitting {
+  top: 350px;
+  left: calc(100% - 95px);
+}
+
+.cursor-completed {
+  top: 290px;
+  left: calc(100% - 150px);
+}
+
+.cursor-notification {
+  top: 360px;
+  left: 430px;
+}
+
+.ferp-mobile-demo {
+  position: relative;
+  width: 100%;
+  min-height: 390px;
+  overflow: hidden;
+  background: #f6f8fb;
+}
+
+.ferp-mobile-transition {
+  width: 100%;
+  animation: ferp-mobile-enter 0.32s ease;
+}
+
+@keyframes ferp-mobile-enter {
+  from {
+    opacity: 0.25;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ferp-mobile-screen {
+  position: relative;
+  min-height: 390px;
+  padding-bottom: 51px;
+  background: #f6f8fb;
+}
+
+.ferp-mobile-header {
+  height: 44px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 7px;
+  padding: 0 11px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8ebf0;
+}
+
+.ferp-mobile-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #2855d9;
+}
+
+.ferp-mobile-header > div:first-child strong {
+  color: #101828;
+  font-size: 0.67rem;
+}
+
+.ferp-mobile-header > span {
+  color: #475467;
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+.ferp-mobile-user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+  color: #667085;
+}
+
+.ferp-mobile-user small {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #2855d9;
+  border-radius: 50%;
+  font-size: 0.42rem;
+  font-weight: 800;
+}
+
+.ferp-mobile-body {
+  position: relative;
+  padding: 12px;
+}
+
+.ferp-mobile-body > h3 {
+  margin: 0 0 9px;
+  color: #101828;
+  font-size: 0.77rem;
+}
+
+.ferp-mobile-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.ferp-mobile-stats > div {
+  min-height: 62px;
+  padding: 9px;
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 7px;
+}
+
+.ferp-mobile-stats span {
+  display: block;
+  color: #667085;
+  font-size: 0.48rem;
+}
+
+.ferp-mobile-stats strong {
+  display: block;
+  margin-top: 7px;
+  color: #101828;
+  font-size: 0.85rem;
+}
+
+.ferp-mobile-card {
+  margin-top: 8px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 7px;
+}
+
+.ferp-mobile-card-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.ferp-mobile-card-heading strong {
+  color: #101828;
+  font-size: 0.57rem;
+}
+
+.ferp-mobile-card-heading span {
+  color: #2563eb;
+  font-size: 0.44rem;
+}
+
+.ferp-mobile-order {
+  min-height: 43px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.ferp-mobile-order > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ferp-mobile-order > div strong,
+.ferp-mobile-order > strong {
+  color: #101828;
+  font-size: 0.49rem;
+}
+
+.ferp-mobile-order > div span {
+  color: #667085;
+  font-size: 0.42rem;
+}
+
+.ferp-mobile-order small {
+  padding: 3px 5px;
+  color: #175cd3;
+  background: #eff8ff;
+  border-radius: 9px;
+  font-size: 0.39rem;
+}
+
+.ferp-mobile-new-order {
+  margin: 0 -4px;
+  padding: 0 4px;
+  background: #f4f7ff;
+}
+
+.ferp-mobile-title {
+  margin-bottom: 9px;
+}
+
+.ferp-mobile-title span {
+  color: #2563eb;
+  font-size: 0.43rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.ferp-mobile-title h3 {
+  margin: 2px 0 0;
+  color: #101828;
+  font-size: 0.78rem;
+}
+
+.ferp-mobile-form,
+.ferp-mobile-payment-card {
+  padding: 11px;
+  background: #ffffff;
+  border: 1px solid #e5e9ef;
+  border-radius: 7px;
+}
+
+.ferp-mobile-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ferp-mobile-form label > span {
+  display: block;
+  margin-bottom: 4px;
+  color: #344054;
+  font-size: 0.45rem;
+  font-weight: 700;
+}
+
+.ferp-mobile-form label > div {
+  min-height: 31px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  color: #101828;
+  border: 1px solid #d7dce3;
+  border-radius: 5px;
+  font-size: 0.5rem;
+}
+
+.ferp-mobile-form button,
+.ferp-mobile-primary,
+.ferp-mobile-payment-card button,
+.ferp-mobile-notification button {
+  width: 100%;
+  min-height: 32px;
+  color: #ffffff;
+  background: #2855d9;
+  border: 0;
+  border-radius: 5px;
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+.ferp-mobile-success {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 8px;
+  padding: 8px;
+  color: #067647;
+  background: #ecfdf3;
+  border-radius: 6px;
+}
+
+.ferp-mobile-success > span {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.42rem;
+}
+
+.ferp-mobile-success strong {
+  font-size: 0.48rem;
+}
+
+.ferp-mobile-customer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 9px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e9ef;
+  border-radius: 6px;
+}
+
+.ferp-mobile-customer > div {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #5266d8;
+  border-radius: 50%;
+  font-size: 0.43rem;
+  font-weight: 800;
+}
+
+.ferp-mobile-customer > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.ferp-mobile-customer strong {
+  color: #101828;
+  font-size: 0.49rem;
+}
+
+.ferp-mobile-customer small {
+  color: #667085;
+  font-size: 0.4rem;
+}
+
+.ferp-mobile-measurements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+  margin-bottom: 9px;
+}
+
+.ferp-mobile-measurements > div {
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e9ef;
+  border-radius: 6px;
+}
+
+.ferp-mobile-measurements span {
+  display: block;
+  color: #667085;
+  font-size: 0.42rem;
+}
+
+.ferp-mobile-measurements strong {
+  display: block;
+  margin-top: 4px;
+  color: #101828;
+  font-size: 0.55rem;
+}
+
+.ferp-mobile-order-money {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-bottom: 9px;
+}
+
+.ferp-mobile-order-money > span {
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+  color: #667085;
+  background: #f8fafc;
+  border-radius: 5px;
+  font-size: 0.4rem;
+}
+
+.ferp-mobile-order-money strong {
+  margin-top: 3px;
+  color: #101828;
+  font-size: 0.52rem;
+}
+
+.ferp-mobile-payment-amount {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid #eef0f3;
+  color: #667085;
+  font-size: 0.48rem;
+}
+
+.ferp-mobile-payment-amount strong {
+  color: #101828;
+  font-size: 0.75rem;
+}
+
+.ferp-mobile-payment-method {
+  min-height: 31px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0;
+  padding: 0 8px;
+  border: 1px solid #d7dce3;
+  border-radius: 5px;
+  color: #344054;
+  font-size: 0.47rem;
+}
+
+.ferp-mobile-receipt-body {
+  display: flex;
+  justify-content: center;
+}
+
+.ferp-mobile-receipt {
+  width: 245px;
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 7px;
+}
+
+.ferp-mobile-receipt > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #d0d5dd;
+}
+
+.ferp-mobile-receipt > div:first-child strong {
+  color: #101828;
+  font-size: 0.55rem;
+}
+
+.ferp-mobile-receipt > span {
+  display: block;
+  margin-top: 7px;
+  color: #667085;
+  font-size: 0.4rem;
+  font-weight: 800;
+}
+
+.ferp-mobile-receipt h3 {
+  margin: 4px 0 1px;
+  color: #101828;
+  font-size: 0.65rem;
+}
+
+.ferp-mobile-receipt > p {
+  margin: 0 0 8px;
+  color: #667085;
+  font-size: 0.45rem;
+}
+
+.ferp-mobile-receipt > div:not(:first-child) {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #eef0f3;
+  color: #667085;
+  font-size: 0.45rem;
+}
+
+.ferp-mobile-receipt > div:not(:first-child) strong {
+  color: #101828;
+}
+
+.ferp-mobile-receipt > small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 9px;
+  padding: 6px;
+  color: #067647;
+  background: #ecfdf3;
+  border-radius: 5px;
+  font-size: 0.4rem;
+}
+
+.ferp-mobile-production-list {
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e9ef;
+  border-radius: 7px;
+}
+
+.ferp-mobile-production-step {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 3px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.ferp-mobile-production-step:last-child {
+  border-bottom: 0;
+}
+
+.ferp-mobile-production-step > div {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #98a2b3;
+  border: 1px solid #e4e7ec;
+  border-radius: 50%;
+  font-size: 0.48rem;
+}
+
+.ferp-mobile-production-step > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.ferp-mobile-production-step strong {
+  color: #344054;
+  font-size: 0.48rem;
+}
+
+.ferp-mobile-production-step small {
+  color: #98a2b3;
+  font-size: 0.39rem;
+}
+
+.ferp-mobile-production-step.done > div {
+  color: #067647;
+  background: #ecfdf3;
+  border-color: #b7e4ca;
+}
+
+.ferp-mobile-production-step.active {
+  background: #eff6ff;
+}
+
+.ferp-mobile-production-step.active > div {
+  color: #2563eb;
+  border-color: #b9d2ff;
+}
+
+.ferp-mobile-notification {
+  padding: 15px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e9ef;
+  border-radius: 7px;
+}
+
+.ferp-mobile-notification > div:first-child {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  background: #eef4ff;
+  border-radius: 50%;
+}
+
+.ferp-mobile-notification > span {
+  color: #2563eb;
+  font-size: 0.4rem;
+  font-weight: 800;
+}
+
+.ferp-mobile-notification h3 {
+  margin: 4px 0;
+  color: #101828;
+  font-size: 0.68rem;
+}
+
+.ferp-mobile-notification > p {
+  margin: 0 0 9px;
+  color: #667085;
+  font-size: 0.44rem;
+}
+
+.ferp-mobile-message {
+  padding: 9px;
+  text-align: left;
+  color: #667085;
+  background: #f8fafc;
+  border-radius: 6px;
+  font-size: 0.42rem;
+  line-height: 1.5;
+}
+
+.ferp-mobile-notification button {
+  margin-top: 9px;
+  background: #16a05d;
+}
+
+.ferp-mobile-navigation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 51px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: #ffffff;
+  border-top: 1px solid #e4e7ec;
+}
+
+.ferp-mobile-navigation span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: #98a2b3;
+  font-size: 0.38rem;
+}
+
+.ferp-mobile-navigation i {
+  font-size: 0.72rem;
+}
+
+.ferp-mobile-navigation span.active {
+  color: #2855d9;
+  background: #f3f6ff;
+}
+
+.ferp-mobile-cursor {
+  position: absolute;
+  z-index: 40;
+  color: #111827;
+  pointer-events: none;
+  transition:
+    top 0.65s ease,
+    left 0.65s ease,
+    transform 0.2s ease;
+}
+
+.ferp-mobile-cursor i {
+  display: block;
+  transform: rotate(-20deg);
+  font-size: 0.92rem;
+}
+
+.mobile-cursor-dashboard,
+.mobile-cursor-final-dashboard {
+  top: 260px;
+  left: 46%;
+}
+
+.mobile-cursor-customer,
+.mobile-cursor-customer-saved {
+  top: 270px;
+  left: 72%;
+}
+
+.mobile-cursor-measurements,
+.mobile-cursor-measurements-saved {
+  top: 285px;
+  left: 72%;
+}
+
+.mobile-cursor-order,
+.mobile-cursor-order-created {
+  top: 273px;
+  left: 72%;
+}
+
+.mobile-cursor-payment {
+  top: 265px;
+  left: 72%;
+}
+
+.mobile-cursor-receipt {
+  top: 275px;
+  left: 62%;
+}
+
+.mobile-cursor-production,
+.mobile-cursor-cutting,
+.mobile-cursor-sewing,
+.mobile-cursor-fitting,
+.mobile-cursor-completed {
+  top: 250px;
+  left: 70%;
+}
+
+.mobile-cursor-notification {
+  top: 265px;
+  left: 65%;
+}
+
+.ferp-preview-progress {
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  background: #e9edf3;
+}
+
+.ferp-preview-progress > div {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #6366f1);
+  transition: width 0.5s ease;
+}
+
+@media (min-width: 992px) {
+  .fashion-erp-preview {
+    transform: translateX(-290px);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .fashion-erp-preview {
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .ferp-desktop-only {
+    display: none;
+  }
+
+  .ferp-mobile-only {
+    display: block;
+  }
+
+  .fashion-erp-preview {
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+    margin: 0;
+    border-radius: 11px;
+  }
+
+  .ferp-preview-controls {
+    height: 34px;
+    padding: 0 10px;
+  }
+
+  .ferp-preview-controls > div:first-child {
+    font-size: 0.58rem;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .ferp-mobile-demo,
+  .ferp-mobile-screen {
+    min-height: 375px;
+  }
+
+  .ferp-mobile-body {
+    padding: 9px;
+  }
+
+  .ferp-mobile-header {
+    padding: 0 8px;
+  }
+
+  .ferp-mobile-stats > div {
+    min-height: 58px;
+    padding: 7px;
+  }
+
+  .ferp-mobile-stats strong {
+    font-size: 0.77rem;
+  }
+
+  .ferp-mobile-order-money > span {
+    padding: 6px 4px;
+  }
+}

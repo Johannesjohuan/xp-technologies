@@ -1,0 +1,41 @@
+.dashboard-demo{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px 0;
+}
+
+.dashboard-demo .erp-preview,
+.dashboard-demo .login-preview{
+    width:100%;
+    max-width:980px;
+    margin:auto;
+}
+
+@media (max-width:992px){
+
+.dashboard-demo{
+    padding:8px 0;
+}
+
+.dashboard-demo .erp-preview,
+.dashboard-demo .login-preview{
+    max-width:100%;
+}
+
+}
+
+@media (max-width:768px){
+
+.dashboard-demo{
+    padding:0;
+}
+
+.dashboard-demo .erp-preview,
+.dashboard-demo .login-preview{
+    width:100%;
+    max-width:100%;
+}
+
+}
