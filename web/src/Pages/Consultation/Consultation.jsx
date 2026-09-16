@@ -91,8 +91,6 @@ function Consultation() {
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
 
-    console.log("handleChange called with:", { name, value, type, checked });   
-
     setFormData((current) => ({
       ...current,
       [name]: type === "checkbox" ? checked : value
@@ -185,6 +183,7 @@ function Consultation() {
 
   const handleConfirmBooking = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    console.log({ bookingInfo: { ...formData, selectedDate, selectedTime } });
     setStep(3);
   };
 
