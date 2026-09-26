@@ -14,7 +14,7 @@ app.use(
 
 app.use(express.json());
 
-app.use("/api", enquiryRoutes);
+app.use("/api/enquiries", enquiryRoutes);
 
 app.get("/api/health", (req, res) => {
   res.status(200).json({
