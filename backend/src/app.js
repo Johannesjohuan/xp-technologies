@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import enquiryRoutes from "./routes/enquiryRoutes.js";
+import bookingRoutes from "./routes/bookingRoutes.js";
+import googleAuthRoutes from "./routes/googleAuthRoutes.js";
 const app = express();
 
 app.use(helmet());
@@ -15,6 +17,8 @@ app.use(
 app.use(express.json());
 
 app.use("/api/enquiries", enquiryRoutes);
+app.use("/api/bookings", bookingRoutes);
+app.use("/api/auth/google", googleAuthRoutes);
 
 app.get("/api/health", (req, res) => {
   res.status(200).json({

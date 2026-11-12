@@ -1,24 +1,18 @@
 import express from "express";
-import { enquirySchema } from "../validators/enquiryValidator.js";
+import { validateEnquiry } from "../middleware/validateEnquiry.js";
+import { createEnquiry } from "../controllers/enquiryController.js";
 
 const router = express.Router();
 
-router.post("/", (req, res) => {
-  const result = enquirySchema.safeParse(req.body);
-
-  if (!result.success) {
-    return res.status(400).json({
-      success: false,
-      message: "Invalid enquiry data",
-      errors: result.error.flatten().fieldErrors,
-    });
-  }
-
-  res.status(200).json({
-    success: true,
-    message: "Enquiry data is valid",
-    data: result.data,
-  });
-});
+router.post(
+  "/",
+  (req, res, next) => {
+    console.log("ENQUIRY ROUTE HIT");
+    console.log("REQUEST BODY:", req.body);
+    next();
+  },
+  validateEnquiry,
+  createEnquiry
+);
 
 export default router;

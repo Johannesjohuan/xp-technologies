@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Navbar.css";
-
 import logo from "../../../assets/logos/xp-logo-white.png";
+import LanguageAssistant from "./LanguageAssistant";
 
 const solutions = [
   {
@@ -50,8 +50,6 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container navbar-inner">
-
-        {/* LOGO */}
         <a className="navbar-brand brand-wrap" href="/">
           <img
             src={logo}
@@ -64,7 +62,6 @@ function Navbar() {
           </span>
         </a>
 
-        {/* MOBILE MENU BUTTON */}
         <button
           className="navbar-toggler"
           type="button"
@@ -77,13 +74,8 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div
-          className="collapse navbar-collapse"
-          id="mainNavbar"
-        >
+        <div className="collapse navbar-collapse" id="mainNavbar">
           <ul className="navbar-nav ms-auto align-items-lg-center">
-
-            {/* SOLUTIONS */}
             <li
               className={`nav-item solutions-nav-item ${
                 mobileSolutionsOpen ? "mobile-solutions-open" : ""
@@ -108,7 +100,6 @@ function Navbar() {
 
               <div className="solutions-dropdown">
                 <div className="solutions-dropdown-list">
-
                   {solutions.map((solution) => (
                     <a
                       key={solution.title}
@@ -121,19 +112,13 @@ function Navbar() {
                       </span>
 
                       <span className="solution-dropdown-content">
-                        <strong>
-                          {solution.title}
-                        </strong>
-
-                        <small>
-                          {solution.description}
-                        </small>
+                        <strong>{solution.title}</strong>
+                        <small>{solution.description}</small>
                       </span>
 
                       <i className="bi bi-arrow-right solution-item-arrow"></i>
                     </a>
                   ))}
-
                 </div>
 
                 <div className="solutions-dropdown-footer">
@@ -143,54 +128,46 @@ function Navbar() {
                     onClick={closeMobileSolutions}
                   >
                     <span>View all solutions</span>
-
                     <i className="bi bi-arrow-right"></i>
                   </a>
                 </div>
               </div>
             </li>
 
-           {/* INDUSTRIES */}
-<li className="nav-item">
-  <a className="nav-link" href="/Industries">
-    <span>Industries</span>
-  </a>
-</li>
-
-            {/* PORTFOLIO */}
             <li className="nav-item">
-             <a className="nav-link" href="/portfolio">
-  Portfolio
-</a>
+              <a className="nav-link" href="/Industries">
+                <span>Industries</span>
+              </a>
             </li>
 
-            {/* ABOUT */}
+            <li className="nav-item">
+              <a className="nav-link" href="/portfolio">
+                Portfolio
+              </a>
+            </li>
+
             <li className="nav-item">
               <a className="nav-link" href="About">
                 About Us
               </a>
             </li>
 
-            {/* RESOURCES */}
             <li className="nav-item">
               <a className="nav-link" href="resources">
                 <span>Resources</span>
-
               </a>
             </li>
 
-            
-            <li className="nav-item consultation-item">
-              <a
-                className="consultation-btn"
-                href="/consultation"
-              >
-                <span>Book a Consultation</span>
+            <li className="nav-item language-nav-item">
+              <LanguageAssistant />
+            </li>
 
+            <li className="nav-item consultation-item">
+              <a className="consultation-btn" href="/consultation">
+                <span>Book a Consultation</span>
                 <i className="bi bi-arrow-right"></i>
               </a>
             </li>
-
           </ul>
         </div>
       </div>

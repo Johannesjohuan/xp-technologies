@@ -935,3 +935,51 @@
     padding-bottom: 40px;
   }
 }
+
+.location-select__control {
+  min-height: 48px;
+  border: 1px solid #d8dde5;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.location-select__control:hover {
+  border-color: #aab3c2;
+}
+
+.location-select__control--is-focused {
+  border-color: #c62828;
+  box-shadow: 0 0 0 1px #c62828;
+}
+
+.location-select__value-container {
+  padding: 6px 12px;
+}
+
+.location-select__placeholder {
+  color: #7b8494;
+}
+
+.location-select__menu {
+  z-index: 20;
+}
+
+.location-select__option {
+  cursor: pointer;
+}
+
+.location-select__option--is-focused {
+  background: #f3f4f6;
+}
+
+.location-select__option--is-selected {
+  background: #c62828;
+  color: white;
+}
+
+.location-select__control--is-disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}

@@ -22,7 +22,7 @@ import VoodiProject from "./pages/Portfolio/VoodiProject/VoodiProject";
 import StyleWrightProject from "./pages/Portfolio/StyleWrightProject/StyleWrightProject";
 import About from "./pages/About/About";
 import Resources from "./Pages/Resources/Resources";
-import Consultation from "./pages/Consultation/Consultation";
+import Consultation from "./Pages/Consultation/Consultation";
 
 function HomePage() {
   return (
